@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns .wrapper to the left */
+  padding-left: 20px; /* Optional: adds space from the left edge */
+  background-image: url('photo/10861578.jpg');
+  background-size: cover; /* Makes image cover entire screen */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* White overlay with transparency */
+  pointer-events: none; /* Allows interaction with content beneath */
+}
+.wrapper {
+  position: relative;
+  max-width: 430px;
+  left: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+  padding: 50px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensures content is above the overlay */
+  backdrop-filter: blur(10px); /* Adds blur effect */
+}
+.wrapper h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFF; /* White color for text */
+}
+.wrapper h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #FF8C00; /* Orange accent */
+}
+.wrapper form {
+  margin-top: 30px;
+}
+.wrapper form .input-box {
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 20px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-color: #FF8C00; /* Orange color for focused input */
+}
+form .policy {
+  display: flex;
+  align-items: center;
+}
+form h3 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #FF8C00; /* Main orange color */
+  cursor: pointer;
+}
+.input-box.button input:hover {
+  background: #e07b00; /* Darker orange for hover */
+}
+form .text h3 {
+  color: #FFF; /* White color for text */
+  width: 100%;
+  text-align: center;
+}
+form .text h3 a {
+  color: #FF8C00; /* Orange for links */
+  text-decoration: none;
+}
+form .text h3 a:hover {
+  text-decoration: underline;
+}
